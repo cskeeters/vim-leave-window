@@ -12,7 +12,8 @@ This is a [Pathogen] compatible plugin.
 ## Configuration
 
 ```vim
-map <leader>w :LWClose<cr>
+nnoremap <leader>mw :LWForceClose<cr>
+nnoremap <leader>w :LWClose<cr>
 ```
 
 [moll/vim-bbye]:https://github.com/moll/vim-bbye
