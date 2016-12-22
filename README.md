@@ -15,4 +15,4 @@ map <leader>w :LWClose<cr>
 ```
 
 [Pathogen]:http://github.com/tpope/vim-pathogen
-[configured]:blob/master/doc/leave_window.txt
+[configured]:doc/leave_window.txt
