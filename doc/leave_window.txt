@@ -15,11 +15,11 @@ closed, configure these variables:
                                         *leave_window-mapping*
 Map to the :LWClose command like so:
 >
-        map <leader>w :LWClose<cr>
+        nnoremap <leader>w :LWClose<cr>
 <
 To discard changes and close:
 >
-        nnoremap <leader>gw :e!<cr>:LWClose<cr>
+        nnoremap <leader>gw :LWForceClose<cr>
 <
 
 
