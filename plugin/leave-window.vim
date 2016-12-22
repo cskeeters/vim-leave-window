@@ -3,6 +3,15 @@ if get(g:, 'loaded_leave_window', 0) == 1
 endif
 let g:loaded_leave_window = 1
 
+"Default Global Variables
+if get(g:, 'lwc_ignore_buftypes', "") == ""
+    let g:lwc_ignore_buftypes = ['nofile']
+endif
+
+if get(g:, 'lwc_ignore_filetypes', "") == ""
+    let g:lwc_ignore_filetypes = ['help', 'tagbar', 'quickfix', 'gitcommit', 'unite']
+endif
+
 noremap <silent> <SID>Close :call leave_window#Close()<CR>
 command -nargs=0 LWClose :call leave_window#Close()<CR>
 
