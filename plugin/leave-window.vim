@@ -12,7 +12,6 @@ if get(g:, 'lwc_ignore_filetypes', "") == ""
     let g:lwc_ignore_filetypes = ['help', 'tagbar', 'quickfix', 'gitcommit', 'unite']
 endif
 
-noremap <silent> <SID>Close :call leave_window#Close()<CR>
-command -nargs=0 LWClose :call leave_window#Close()<CR>
+command -nargs=0 LWClose :call leave_window#Close()
 
 " vim: et ts=4 sts=4 sw=4
