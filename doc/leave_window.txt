@@ -1,0 +1,26 @@
+*leave_window.txt* Plugin for closing buffers while leaving windows
+
+Closes buffers while leaving splits in place, when appropriate.
+
+                                        *leave_window-settings*
+
+When you want some windows containing buffers for file drawers and help to be
+closed, configure these variables:
+>
+        let g:lwc_ignore_buftypes = ['nofile']
+        let g:lwc_ignore_filetypes = ['help', 'tagbar', 'quickfix',
+                                    \ 'gitcommit', 'unite']
+<
+
+                                        *leave_window-mapping*
+Map to the :LWClose command like so:
+>
+        map <leader>w :LWClose<cr>
+<
+To discard changes and close:
+>
+        nnoremap <leader>gw :e!<cr>:LWClose<cr>
+<
+
+
+vim: ft=help et ts=8 sts=8 sw=8
