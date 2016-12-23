@@ -7,11 +7,12 @@ function! leave_window#CloseBuffer(force)
     endif
 endfunction
 
-function! leave_window#Close(force)
+function! leave_window#Close(bang)
+    let force=!empty(a:bang)
     if index(g:lwc_ignore_filetypes, &filetype) != -1 ||
                 \ index(g:lwc_ignore_buftypes, &buftype) != -1
 
-        call leave_window#CloseBuffer(a:force)
+        call leave_window#CloseBuffer(l:force)
 
         " If this is not the last window in the tab, close it
         let l:tabinfo = gettabinfo(tabpagenr())
@@ -20,6 +21,6 @@ function! leave_window#Close(force)
             close
         endif
     else
-        call leave_window#CloseBuffer(a:force)
+        call leave_window#CloseBuffer(l:force)
     endif
 endfunction

@@ -12,7 +12,7 @@ This is a [Pathogen] compatible plugin.
 ## Configuration
 
 ```vim
-nnoremap <leader>mw :LWForceClose<cr>
+nnoremap <leader>gw :LWClose!<cr>
 nnoremap <leader>w :LWClose<cr>
 ```
 

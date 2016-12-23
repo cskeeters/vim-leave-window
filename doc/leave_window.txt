@@ -19,7 +19,7 @@ Map to the :LWClose command like so:
 <
 To discard changes and close:
 >
-        nnoremap <leader>gw :LWForceClose<cr>
+        nnoremap <leader>gw :LWClose!<cr>
 <
 
 
