@@ -14,11 +14,14 @@ function! leave_window#Close(bang)
 
         call leave_window#CloseBuffer(l:force)
 
-        " If this is not the last window in the tab, close it
-        let l:tabinfo = gettabinfo(tabpagenr())
-        if len(l:tabinfo[0]['windows']) > 1
-            "echom "Running close"
-            close
+        " Older versions of vim (7.4) don't support gettabinfo
+        if exists("*gettabinfo")
+            " If this is not the last window in the tab, close it
+            let l:tabinfo = gettabinfo(tabpagenr())
+            if len(l:tabinfo[0]['windows']) > 1
+                "echom "Running close"
+                close
+            endif
         endif
     else
         call leave_window#CloseBuffer(l:force)
